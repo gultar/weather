@@ -39,14 +39,14 @@ class App extends Component {
     const country = e.target.elements.country.value;
 
     //API Call for current weather
-    const api_call = await fetch(`//api.openweathermap.org/data/2.5/weather?q=${city},${country}&APPID=${APIKEY}&units=metric`);
+    const api_call = await fetch(`https://crossorigin.me/https://api.openweathermap.org/data/2.5/weather?q=${city},${country}&APPID=${APIKEY}&units=metric`);
     const data = await api_call.json();
     //console.log(data);
 
     //API Call for 5-day forecast
-    const api_call_forecast = await fetch(`//api.openweathermap.org/data/2.5/forecast?q=${city},${country}&appid=${APIKEY}&units=metric`);
+  /*  const api_call_forecast = await fetch(`api.openweathermap.org/data/2.5/forecast?q=${city},${country}&appid=${APIKEY}&units=metric`);
     const dataForecast = await api_call_forecast.json();
-    console.log(dataForecast);
+    console.log(dataForecast);*/
 
     /*  ----- Checks if it applies a purple-blueish design for nighttime  ----*/
 
