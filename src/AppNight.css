@@ -1,0 +1,35 @@
+.wrapper-night{
+
+  background: linear-gradient(to right, #3B5A9A, #322C70); /* #6B2C88  #A852C7 #5433a4*/
+
+}
+
+.title-container-night{
+  transition: all 2s;
+  height: 90vh;
+  background: url("img/bg-night-test.png") center center no-repeat !important;
+  background-size: cover;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: #0AA7F4;
+}
+
+.input-night{
+  border-bottom: solid 1px #0AA7F4 !important;
+}
+
+.button-night{
+  background-color: #0AA7F4 !important;
+}
+
+.weather__key-night{
+  color:#0AA7F4 !important;
+}
+
+@media (max-width: 767px){
+  .title-container-night{
+
+  }
+}
