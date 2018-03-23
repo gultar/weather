@@ -10,7 +10,7 @@ import classNames from 'classnames';
 
 
 const APIKEY = "4fc135b0d0e5f9c15483bf34b463a5f8";
-const apiCallUrlToTest = "http://api.openweathermap.org/data/2.5/weather?q=Quebec,ca&appid=4fc135b0d0e5f9c15483bf34b463a5f8";
+const apiCallUrlToTest = "https://api.openweathermap.org/data/2.5/weather?q=Quebec,ca&appid=4fc135b0d0e5f9c15483bf34b463a5f8";
 
 //--------Controls the style of the app according to the time of day
 let isNightTime = checkIfDayTime();
@@ -39,12 +39,12 @@ class App extends Component {
     const country = e.target.elements.country.value;
 
     //API Call for current weather
-    const api_call = await fetch(`http://api.openweathermap.org/data/2.5/weather?q=${city},${country}&APPID=${APIKEY}&units=metric`);
+    const api_call = await fetch(`https://api.openweathermap.org/data/2.5/weather?q=${city},${country}&APPID=${APIKEY}&units=metric`);
     const data = await api_call.json();
     //console.log(data);
 
     //API Call for 5-day forecast
-    const api_call_forecast = await fetch(`http://api.openweathermap.org/data/2.5/forecast?q=${city},${country}&appid=${APIKEY}&units=metric`);
+    const api_call_forecast = await fetch(`https://api.openweathermap.org/data/2.5/forecast?q=${city},${country}&appid=${APIKEY}&units=metric`);
     const dataForecast = await api_call_forecast.json();
     console.log(dataForecast);
 
