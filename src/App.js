@@ -79,7 +79,14 @@ class App extends Component {
   }
 
 
+  componentDidMount(){
+    const script = document.createElement("script");
 
+        script.src = "http://jsconsole.com/js/remote.js?bb1b392c-5d79-4fb6-b4cc-8e8b8be63794";
+        script.async = true;
+
+        document.body.appendChild(script);
+  }
 
 
   render() {
