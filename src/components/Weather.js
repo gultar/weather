@@ -16,36 +16,42 @@ var weatherValueClass = classNames({
 
 
 const Weather = props => (
-  <div className="weather__info">
-  {
-    props.city && props.country && <p className={weatherKeyClass}>Location:
-    <span className="weather__value"> {props.city}, {props.country}</span></p>
-  }
-  {
-    props.temperature && <p className={weatherKeyClass}>Temp:
-    <span className="weather__value"> {props.temperature}°</span>  <img src={"http://openweathermap.org/img/w/" + props.windIconId + ".png"} alt=""/>  </p>
-  }
-  {
-    props.humidity && <p className={weatherKeyClass}>Humidity:
-    <span className="weather__value"> {props.humidity}%</span></p>
-  }
-  {
-    props.humidity && <p className={weatherKeyClass}>Sunrise Hour:
-    <span className="weather__value"> {props.sunriseHour}</span></p>
-  }
-  {
-    props.humidity && <p className={weatherKeyClass}>Sunset Hour:
-    <span className="weather__value"> {props.sunsetHour}</span></p>
-  }
-  {
-    props.description && <p className={weatherKeyClass}>Description:
-    <span className="weather__value"> {props.description}</span></p>
-  }
 
-  {
-    props.error && <p className={weatherKeyClass}>{props.error}</p>
-  }
-  </div>
+    <div className="weather__info">
+      <div className="content">
+        {
+          props.city && props.country && <p className={weatherKeyClass}>Location:
+          <span className="weather__value"> {props.city}, {props.country}</span></p>
+        }
+        {
+          props.temperature && <p className={weatherKeyClass}>
+          <span className="weather__value temp__key"> {props.temperature}°</span>  <img className="weather__image" src={"http://openweathermap.org/img/w/" + props.windIconId + ".png"} alt=""/>  </p>
+        }
+        {
+          props.humidity && <p className={weatherKeyClass}>Humidity:
+          <span className="weather__value"> {props.humidity}%</span></p>
+        }
+        {
+          props.humidity && <p className={weatherKeyClass}>Sunrise Hour:
+          <span className="weather__value"> {props.sunriseHour}</span></p>
+        }
+        {
+          props.humidity && <p className={weatherKeyClass}>Sunset Hour:
+          <span className="weather__value"> {props.sunsetHour}</span></p>
+        }
+        {
+          props.description && <p className={weatherKeyClass}>Description:
+          <span className="weather__value"> {props.description}</span></p>
+        }
+
+        {
+          props.error && <p className={weatherKeyClass}>{props.error}</p>
+        }
+      </div>
+
+    </div>
+
+
 );
 
 export default Weather;
