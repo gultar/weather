@@ -45,7 +45,7 @@ class App extends Component {
     //console.log(data);
 
     //API Call for 5-day forecast
-    const api_call_forecast = await fetch(`http://api.openweathermap.org/data/2.5/forecast?q=${city},${country}&appid=${APIKEY}&units=metric`);
+    const api_call_forecast = await fetch(`https://api.openweathermap.org/data/2.5/forecast?q=${city},${country}&appid=${APIKEY}&units=metric`);
     const dataForecast = await api_call_forecast.json();
     console.log(dataForecast);
 
